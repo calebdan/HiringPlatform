@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
@@ -77,7 +78,7 @@ class MainActivity : ComponentActivity() {
 
                             val canvasWidth = size.width
 
-                            Log.i("Canvas Width", canvasWidth.toString());
+                            Log.i("Canvas Width", canvasWidth.toString())
 
 
                             drawLine(
@@ -141,7 +142,7 @@ class MainActivity : ComponentActivity() {
                                 painterResource(id = R.drawable.suitcase),
                                 contentDescription = null,
                                 modifier = Modifier
-                                    .size(30.dp)
+                                    .size(28.dp)
                                     .weight(0.1f),
                                 colorFilter = ColorFilter.tint(Color.White)
                             )
@@ -150,7 +151,7 @@ class MainActivity : ComponentActivity() {
 
                             Text(
                                 text = "A design job",
-                                modifier = Modifier.weight(0.1f)
+                                modifier = Modifier.weight(0.1f).align(CenterVertically)
                             )
 
                             Icon(
