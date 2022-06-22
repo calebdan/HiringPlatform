@@ -159,7 +159,7 @@ class MainActivity : ComponentActivity() {
 
                             Icon(
                                 Icons.Filled.Check,
-                                contentDescription = null,
+                                contentDescription = null
 
 
                                 )
