@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
@@ -29,6 +30,7 @@ import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -133,32 +135,34 @@ class MainActivity : ComponentActivity() {
                     Button(
                         onClick = { /*TODO*/ }, modifier = Modifier
                             .fillMaxWidth()
-                            .height(60.dp), shape = RoundedCornerShape(15.dp)
+                            .height(60.dp),
+                        colors = ButtonDefaults.buttonColors(Color(0xFFd7d0ff)),
+                        shape = RoundedCornerShape(15.dp)
                     ) {
 
-                        Row(horizontalArrangement = Arrangement.SpaceEvenly) {
+                        Row() {
 
                             Image(
                                 painterResource(id = R.drawable.suitcase),
                                 contentDescription = null,
                                 modifier = Modifier
-                                    .size(28.dp)
-                                    .weight(0.1f),
-                                colorFilter = ColorFilter.tint(Color.White)
+                                    .size(24.dp),
+
                             )
-
-
 
                             Text(
                                 text = "A design job",
-                                modifier = Modifier.weight(0.1f).align(CenterVertically)
+                                fontSize = 15.sp,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier.padding(start = 10.dp, top = 2.dp)
                             )
 
                             Icon(
                                 Icons.Filled.Check,
                                 contentDescription = null,
-                                modifier = Modifier.weight(0.1f)
-                            )
+
+
+                                )
                         }
                     }
 
@@ -167,23 +171,22 @@ class MainActivity : ComponentActivity() {
                     OutlinedButton(
                         onClick = { /*TODO*/ }, modifier = Modifier
                             .fillMaxWidth()
-                            .height(60.dp)
+                            .height(60.dp),
+                        shape = RoundedCornerShape(15.dp)
                     ) {
                         Row(horizontalArrangement = Arrangement.SpaceEvenly) {
 
-                            Image(
-                                painterResource(id = R.drawable.suitcase),
+                            Icon(
+                                Icons.Outlined.Person,
                                 contentDescription = null,
                                 modifier = Modifier
                                     .size(29.dp)
                                     .weight(0.2f)
                             )
 
-
-
                             Text(
                                 text = "A design job",
-                                modifier = Modifier.weight(0.3f)
+                                textAlign = TextAlign.Center
                             )
 
 
