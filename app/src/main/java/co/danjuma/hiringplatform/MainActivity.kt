@@ -167,26 +167,30 @@ class MainActivity : ComponentActivity() {
 
                     Spacer(modifier = Modifier.height(16.dp))
 
+
                     OutlinedButton(
-                        onClick = { /*TODO*/ }, modifier = Modifier
+                        onClick = { /*TODO*/ },
+                        modifier = Modifier
                             .fillMaxWidth()
                             .height(60.dp),
-                        shape = RoundedCornerShape(15.dp)
-                    ) {
-                        Row() {
+                        shape = RoundedCornerShape(15.dp),
+
+                        ) {
+                        Row(
+                            verticalAlignment = Alignment.Top,
+                            horizontalArrangement = Arrangement.Start
+                        ) {
 
                             Image(
                                 painterResource(id = R.drawable.user),
                                 contentDescription = null,
                                 modifier = Modifier
-                                    .size(24.dp),
-                                Alignment.CenterStart
+                                    .size(24.dp)
 
                             )
 
                             Text(
                                 text = "Talented designers",
-                                textAlign = TextAlign.Center,
                                 color = Color.Black,
                                 fontSize = 15.sp,
                                 modifier = Modifier
