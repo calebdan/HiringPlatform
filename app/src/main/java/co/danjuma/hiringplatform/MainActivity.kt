@@ -84,17 +84,15 @@ class MainActivity : ComponentActivity() {
 
 
                             drawLine(
-                                start = Offset(x = canvasWidth, y = 140.0f),
-                                end = Offset(x = 0f, y = 140f),
+                                start = Offset(x = canvasWidth, y = 124.0f),
+                                end = Offset(x = 0f, y = 124f),
                                 color = Color(0xFF0cab7a),
                                 strokeWidth = 17F
                             )
                         }
-
-
                     )
 
-                    Spacer(modifier = Modifier.height(15.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
 
                     Text(
                         text = "Discover 876 open positions",
@@ -107,7 +105,7 @@ class MainActivity : ComponentActivity() {
 
 
                     Box(
-                        modifier = Modifier.padding(top = 50.dp)
+                        modifier = Modifier.padding(top = 18.dp)
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.main_background),
@@ -129,7 +127,7 @@ class MainActivity : ComponentActivity() {
 
                         )
 
-                    Spacer(modifier = Modifier.height(20.dp))
+                    Spacer(modifier = Modifier.height(17.dp))
 
 
                     Button(
@@ -163,11 +161,11 @@ class MainActivity : ComponentActivity() {
                                 contentDescription = null
 
 
-                                )
+                            )
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(20.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
 
                     OutlinedButton(
                         onClick = { /*TODO*/ }, modifier = Modifier
@@ -175,25 +173,30 @@ class MainActivity : ComponentActivity() {
                             .height(60.dp),
                         shape = RoundedCornerShape(15.dp)
                     ) {
-                        Row(horizontalArrangement = Arrangement.SpaceEvenly) {
+                        Row() {
 
-                            Icon(
-                                Icons.Outlined.Person,
+                            Image(
+                                painterResource(id = R.drawable.user),
                                 contentDescription = null,
                                 modifier = Modifier
-                                    .size(29.dp)
-                                    .weight(0.2f)
+                                    .size(24.dp),
+                                Alignment.CenterStart
+
                             )
 
                             Text(
-                                text = "A design job",
-                                textAlign = TextAlign.Center
-                            )
+                                text = "Talented designers",
+                                textAlign = TextAlign.Center,
+                                color = Color.Black,
+                                fontSize = 15.sp,
+                                modifier = Modifier
+                                    .offset(0.dp, 3.dp)
+                                    .padding(start = 10.dp)
 
+                            )
 
                         }
                     }
-
 
                 }
 
@@ -209,7 +212,6 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun TextFunction() {
-
 
 }
 
