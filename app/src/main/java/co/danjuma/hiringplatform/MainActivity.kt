@@ -147,6 +147,7 @@ class MainActivity : ComponentActivity() {
                                 contentDescription = null,
                                 modifier = Modifier
                                     .size(24.dp),
+                                Alignment.CenterStart
 
                             )
 
