@@ -201,6 +201,19 @@ class MainActivity : ComponentActivity() {
 
                         }
                     }
+                    
+                    Row(){
+                        
+                        Text(text = "Skip")
+                        
+                        Button(onClick = { /*TODO*/ }, modifier = Modifier
+                            .width(70.dp)
+                            .height(60.dp),
+                            colors = ButtonDefaults.buttonColors(Color(0xFFd7d0ff)),
+                            shape = RoundedCornerShape(15.dp)) {
+                            
+                        }
+                    }
 
                 }
 
