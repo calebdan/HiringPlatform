@@ -5,33 +5,25 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.outlined.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -165,7 +157,7 @@ class MainActivity : ComponentActivity() {
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(20.dp))
 
 
                     OutlinedButton(
@@ -182,7 +174,7 @@ class MainActivity : ComponentActivity() {
                         ) {
 
                             Image(
-                                painterResource(id = R.drawable.user),
+                                painterResource(id = R.drawable.profile),
                                 contentDescription = null,
                                 modifier = Modifier
                                     .size(24.dp)
@@ -201,17 +193,19 @@ class MainActivity : ComponentActivity() {
 
                         }
                     }
-                    
-                    Row(){
-                        
+
+                    Spacer(modifier = Modifier.height(20.dp))
+
+                    Row(modifier = Modifier.fillMaxWidth().border(1.dp, Color.Black)){
+
                         Text(text = "Skip")
-                        
+
                         Button(onClick = { /*TODO*/ }, modifier = Modifier
-                            .width(70.dp)
-                            .height(60.dp),
+                            .width(80.dp)
+                            .height(50.dp),
                             colors = ButtonDefaults.buttonColors(Color(0xFFd7d0ff)),
-                            shape = RoundedCornerShape(15.dp)) {
-                            
+                            shape = RoundedCornerShape(15.dp), ) {
+
                         }
                     }
 
@@ -220,7 +214,6 @@ class MainActivity : ComponentActivity() {
             }
 
         }
-
 
     }
 
