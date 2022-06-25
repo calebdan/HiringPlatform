@@ -136,21 +136,19 @@ class MainActivity : ComponentActivity() {
                                 painterResource(id = R.drawable.suitcase),
                                 contentDescription = null,
                                 modifier = Modifier
-                                    .size(24.dp),
-                                Alignment.CenterStart
+                                    .size(24.dp)
 
                             )
 
                             Text(
                                 text = "A design job",
                                 fontSize = 15.sp,
-                                textAlign = TextAlign.Start,
                                 modifier = Modifier.padding(start = 10.dp, top = 2.dp)
                             )
 
                             Icon(
                                 Icons.Filled.Check,
-                                contentDescription = null
+                                contentDescription = null, modifier = Modifier.weight(1.0f)
 
 
                             )
@@ -168,10 +166,7 @@ class MainActivity : ComponentActivity() {
                         shape = RoundedCornerShape(15.dp),
 
                         ) {
-                        Row(
-                            verticalAlignment = Alignment.Top,
-                            horizontalArrangement = Arrangement.Start
-                        ) {
+                        Row() {
 
                             Image(
                                 painterResource(id = R.drawable.profile),
@@ -187,7 +182,7 @@ class MainActivity : ComponentActivity() {
                                 fontSize = 15.sp,
                                 modifier = Modifier
                                     .offset(0.dp, 3.dp)
-                                    .padding(start = 10.dp)
+                                    .padding(start = 10.dp).weight(0.8f)
 
                             )
 
